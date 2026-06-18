@@ -1,4 +1,4 @@
-class ListNode<T> {
+export class ListNode<T> {
     value: T;
     next: ListNode<T> | null;
 
@@ -28,7 +28,7 @@ class ListNode<T> {
     }
 }   
 
-class LinkedList<T> {
+export class LinkedList<T> {
     private head: ListNode<T> | null;
     private tail: ListNode<T> | null;
     private length: number;
@@ -134,6 +134,103 @@ class LinkedList<T> {
         this.tail = null;
         this.length = 0;
     }
-}
+    
+    //to array
+    toArray(): T[] {
+    const result: T[] = [];
 
-export { LinkedList };
+    let current = this.head;
+
+    while (current) {
+        result.push(current.getvalue());
+        current = current.getnext();
+    }
+    return result;
+    }
+    
+    //check if list contains a value
+    contains(value: T): boolean {
+    let current = this.head;
+
+    while (current) {
+        if (current.getvalue() === value) {
+            return true;
+        }
+        current = current.getnext();
+    }
+    return false;
+    }
+
+    //get the index of a value in the list
+    indexOf(value: T): number {
+        let current = this.head;
+        let index = 0;
+
+        while (current) {
+            if (current.getvalue() === value) {
+                return index;
+            }
+            current = current.getnext();
+            index++;
+        }
+        return -1;
+    }
+
+    //insert a new node at a specific index
+    insert(index: number, value: T): void {
+        if (index < 0 || index > this.length) {
+            return;
+        }
+        const newNode = new ListNode(value);
+
+        if (index === 0) {
+            newNode.setnext(this.head);
+            this.head = newNode;
+
+            if (this.tail === null) {
+                this.tail = newNode;
+            }
+        } else {
+            let current = this.head;
+
+            for (let i = 0; i < index - 1; i++) {
+                current = current!.getnext();
+            }
+
+            newNode.setnext(current!.getnext());
+            current!.setnext(newNode);
+
+            if (newNode.getnext() === null) {
+                this.tail = newNode;
+            }
+        }
+        this.length++;
+    }
+
+    //iterate over the list and apply a callback function to each value
+    forEach(callback: (value: T) => void): void {
+        let current = this.head;
+
+        while (current) {
+            callback(current.getvalue());
+            current = current.getnext();
+        }
+    }
+
+    //update the value of a node at a specific index
+    set(index: number, value: T): boolean {
+        if (index < 0 || index >= this.length) {
+            return false;
+        }
+
+        let current = this.head;
+
+        for (let i = 0; i < index; i++) {
+            current = current!.getnext();
+        }
+
+        current!.setvalue(value);
+
+        return true;
+    }
+}

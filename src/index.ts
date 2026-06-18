@@ -1,12 +1,9 @@
-import { LinkedList } from "./structures/LinkedList";
-const list = new LinkedList<number>();
+import { HashTable } from "./structures/HashTable";
 
-list.append(10);
-list.append(20);
-list.append(30);
+const table = new HashTable<string, number>();
 
-list.remove(2);
+table.set("abc", 1);
+table.set("cab", 2);
 
-list.append(40);
-
-list.printList();
+console.log(table.get("abc"));
+console.log(table.get("cab"));
