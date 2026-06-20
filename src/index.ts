@@ -1,12 +1,18 @@
-import { BinarySearchTree } from "./structures/BinarySearchTree";
-const bst = new BinarySearchTree();
+import { MaxHeap } from './structures/MaxHeap';
+const heap = new MaxHeap();
 
-bst.insert(50);
-bst.insert(30);
-bst.insert(70);
-bst.insert(60);
-bst.insert(80);
+heap.insert(100);
+heap.insert(90);
+heap.insert(60);
+heap.insert(80);
+heap.insert(110);
 
-bst.delete(70);
+heap.print();
 
-bst.inOrder();;
+console.log(heap.extractMax());
+
+heap.print();
+
+console.log(heap.peek());
+console.log(heap.size());
+console.log(heap.isEmpty());
