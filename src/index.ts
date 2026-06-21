@@ -1,18 +1,18 @@
-import { MaxHeap } from './structures/MaxHeap';
-const heap = new MaxHeap();
+import { Graph } from "./structures/Graph";
+const graph = new Graph();
 
-heap.insert(100);
-heap.insert(90);
-heap.insert(60);
-heap.insert(80);
-heap.insert(110);
+graph.addVertex("A");
+graph.addVertex("B");
+graph.addVertex("C");
+graph.addVertex("D");
+graph.addVertex("E");
+graph.addVertex("F");
 
-heap.print();
+graph.addEdge("A", "B");
+graph.addEdge("B", "C");
 
-console.log(heap.extractMax());
+graph.addEdge("D", "E");
 
-heap.print();
-
-console.log(heap.peek());
-console.log(heap.size());
-console.log(heap.isEmpty());
+console.log(
+    graph.connectedComponents()
+);
