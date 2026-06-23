@@ -1,18 +1,23 @@
-import { Graph } from "./structures/Graph";
-const graph = new Graph();
+import { Trie } from "./structures/trie";
+const trie = new Trie();
 
-graph.addVertex("A");
-graph.addVertex("B");
-graph.addVertex("C");
-graph.addVertex("D");
-graph.addVertex("E");
-graph.addVertex("F");
+trie.insert("cat");
+trie.insert("car");
+trie.insert("care");
+trie.insert("dog");
 
-graph.addEdge("A", "B");
-graph.addEdge("B", "C");
+console.log(trie.search("cat"));
+console.log(trie.search("ca"));
 
-graph.addEdge("D", "E");
+console.log(trie.startsWith("ca"));
 
-console.log(
-    graph.connectedComponents()
-);
+console.log(trie.wordsWithPrefix("ca"));
+
+console.log(trie.size());
+
+trie.delete("care");
+
+console.log(trie.search("care"));
+console.log(trie.search("car"));
+
+console.log(trie.getAllWords());
