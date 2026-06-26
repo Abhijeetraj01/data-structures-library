@@ -55,12 +55,6 @@ Clone the repository:
 git clone https://github.com/Abhijeetraj01/dsalibrary.git
 ```
 
-install the package:
-
-```bash
-npm install dsalibrary
-```
-
 Move into the project:
 
 ```bash
@@ -80,6 +74,12 @@ npm run build
 ```
 
 ---
+
+install the package:
+
+```bash
+npm install dsalibrary
+```
 
 # 🚀 Usage
 
