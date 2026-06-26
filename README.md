@@ -1,6 +1,6 @@
 # 📚 DS Library
 
-![Build](https://github.com/YOUR_USERNAME/dsLibrary/actions/workflows/build.yml/badge.svg)
+![Build](https://github.com/Abhijeetraj01/dsalibrary/actions/workflows/build.yml/badge.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript\&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Data Structures](https://img.shields.io/badge/Data%20Structures-10+-blue)
@@ -52,13 +52,19 @@ src/
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/dsLibrary.git
+git clone https://github.com/Abhijeetraj01/dsalibrary.git
+```
+
+install the package:
+
+```bash
+npm install dsalibrary
 ```
 
 Move into the project:
 
 ```bash
-cd dsLibrary
+cd dsalibrary
 ```
 
 Install dependencies:

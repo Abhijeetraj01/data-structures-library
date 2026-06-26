@@ -9,7 +9,7 @@ export * from "./structures/AVLTree";
 export * from "./structures/MaxHeap";
 export * from "./structures/Graph";
 export * from "./structures/UnionFind";
-export * from "./structures/trie";
+export * from "./structures/Trie";
 
 // Sorting Algorithms
 
@@ -31,13 +31,13 @@ export * from "./algorithms/searching/RecursiveBinarySearch";
 export * from "./algorithms/graph/Dijkstra";
 export * from "./algorithms/graph/TopologicalSort";
 export * from "./algorithms/graph/Kruskal";
-export * from "./algorithms/graph/Prims";
+export * from "./algorithms/graph/Prim";
 
 // Mathematical Algorithms
 
-export * from "./algorithms/maths/GCD";
-export * from "./algorithms/maths/LCM";
-export * from "./algorithms/maths/SieveOfEratosthenes";
-export * from "./algorithms/maths/FastExponentiation";
-export * from "./algorithms/maths/ModularArithmetic";
-export * from "./algorithms/maths/EulerTotient";
+export * from "./algorithms/math/GCD";
+export * from "./algorithms/math/LCM";
+export * from "./algorithms/math/SieveOfEratosthenes";
+export * from "./algorithms/math/FastExponentiation";
+export * from "./algorithms/math/ModularArithmetic";
+export * from "./algorithms/math/EulerTotient";

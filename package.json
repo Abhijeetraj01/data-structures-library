@@ -1,5 +1,5 @@
 {
-  "name": "dslibrary",
+  "name": "dsalibrary",
   "version": "1.0.0",
   "description": "A comprehensive TypeScript library implementing Data Structures and Algorithms from scratch.",
   "keywords": [
@@ -13,13 +13,13 @@
     "math",
     "computer-science"
   ],
-  "homepage": "https://github.com/Abhijeetraj01/dsLibrary",
+  "homepage": "https://github.com/Abhijeetraj01/dsalibrary",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Abhijeetraj01/dsLibrary.git"
+    "url": "https://github.com/Abhijeetraj01/dsalibrary.git"
   },
   "bugs": {
-    "url": "https://github.com/Abhijeetraj01/dsLibrary/issues"
+    "url": "https://github.com/Abhijeetraj01/dsalibrary/issues"
   },
   "author": "Abhijeet Raj",
   "license": "MIT",
